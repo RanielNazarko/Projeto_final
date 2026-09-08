@@ -19,10 +19,9 @@
                 <th>Quinta-Feira</th>
                 <th>Sexta-Feira</th>
             </thead>
+
             <tbody>
-
                 <tr>
-
                     <td>
                         <ul>
                             <li>7:20</li>
@@ -34,74 +33,21 @@
                             <li>11:45</li>
                         </ul>
                     </td>
-
-                    <!-- Segunda-feira -->
-                    <td>
-                        <ul>
-                            <li>Matemática</li>
-                            <li>Física</li>
-                            <li>Química</li>
-                            <li>Biologia</li>
-                            <li>História</li>
-                            <li>Geografia</li>
-                            <li>Filosofia</li>
-                        </ul>
-                    </td>
-
-                    <!-- Terça-feira -->
-                    <td>
-                        <ul>
-                            <li>Português</li>
-                            <li>Literatura</li>
-                            <li>Inglês</li>
-                            <li>Educação Física</li>
-                            <li>Artes</li>
-                            <li>Sociologia</li>
-                            <li>Redação</li>
-                        </ul>
-                    </td>
-
-                    <!-- Quarta-feira -->
-                    <td>
-                        <ul>
-                            <li>Física</li>
-                            <li>Matemática</li>
-                            <li>Química</li>
-                            <li>Biologia</li>
-                            <li>História</li>
-                            <li>Geografia</li>
-                            <li>Português</li>
-                        </ul>
-                    </td>
-
-                    <!-- Quinta-feira -->
-                    <td>
-                        <ul>
-                            <li>Biologia</li>
-                            <li>Química</li>
-                            <li>História</li>
-                            <li>Geografia</li>
-                            <li>Matemática</li>
-                            <li>Português</li>
-                            <li>Inglês</li>
-                        </ul>
-                    </td>
-
-                    <!-- Sexta-feira -->
-                    <td>
-                        <ul>
-                            <li>Sociologia</li>
-                            <li>Filosofia</li>
-                            <li>Redação</li>
-                            <li>Literatura</li>
-                            <li>Artes</li>
-                            <li>Educação Física</li>
-                            <li>Física</li>
-                        </ul>
-                    </td>
-
-
+                    <td id = "segunda" ></td>
+                    <td id = "terça" ></td>
+                    <td id = "quarta" ></td>
+                    <td id = "quinta" ></td>
+                    <td id = "sexta" ></td>
                 </tr>
+
+                <tr>
+                    <td> </td>
+                    <td> <button onclick="carregar_horario('segunda')">Carregar</button>  </td>
+                    <td> <button onclick="carregar_horario('terça')">Carregar</button>    </td>
+                    <td> <button onclick="carregar_horario('quarta')">Carregar</button>   </td>
+                    <td> <button onclick="carregar_horario('quinta')">Carregar</button>   </td>
+                    <td> <button onclick="carregar_horario('sexta')">Carregar</button>    </td>
+                </tr> 
 
             </tbody>
         </table>

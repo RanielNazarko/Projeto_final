@@ -53,7 +53,7 @@
         async function carregar_horario(dia){
             const coluna_dia = document.getElementById(dia)
             try {
-                const link = "http://localhost:3000/horario/" + dia
+                const link = "http://localhost:3000/aulas/" + dia
                 const consulta_api = await fetch(link)
                 if(consulta_api.ok) {
                     const aulas_dia = await consulta_api.json()
@@ -61,11 +61,12 @@
                         coluna_dia.innerHTML = "Nenhuma aula cadastrada!"
                     } else {
                         console.log(aulas_dia)
-                        coluna_dia.innerHTML = "<ul>"
-                        aulas_dia.forEach((aula) => {
-                            coluna_dia.innerHTML += "<li>" + aula.componente + "</li>"
+                        let = html = "<ul>"
+                        aulas_dia.resposta.forEach((aula1) => {
+                            html += "<li>" + aula1.Aula + "</li>"
                         })
-                        coluna_dia.innerHTML += "</ul>"
+                        html += "</ul>"
+                        coluna_dia.innerHTML += html
                     }
                 }
             } catch (erro) {

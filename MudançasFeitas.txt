@@ -1,0 +1,5 @@
+- Centralizei no meio da tela
+- Mudei a cor de fundo do site
+- adicionei um retangulo por tras das escritas
+- Mudei a cor das escritas da tabela
+- Fiz com que os botões sumão ao ser apertados

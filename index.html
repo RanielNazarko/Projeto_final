@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Horários Kennedy</title>
+
+    <style>
+    body {
+        margin: 0;
+        min-height: 100vh;          /* faz o body ocupar a altura inteira da tela */
+        display: flex;
+        justify-content: center;    /* centraliza horizontalmente */
+        align-items: center;        /* centraliza verticalmente */
+        background-color: #07bdbd;
+         }
+    table {
+        background-color: rgb(53, 60, 151);      /* cor do retângulo */
+        padding: 25px;                /* espaço interno (quanto maior, maior o retângulo) */
+        border-radius: 12px;          /* cantos arredondados */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* sombra suave */
+        color: rgb(248, 223, 223);   /* ← cor das escritas */
+    }
+    </style>
+
 </head>
 <body>
     <header></header>
@@ -30,18 +49,18 @@
                         </ul>
                     </td>
                     <td id = "segunda"> </td>
-                    <td id = "terça"> </td>
+                    <td id = "terca"> </td>
                     <td id = "quarta"> </td>
                     <td id = "quinta"> </td>
                     <td id = "sexta"> </td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td> <button onclick="carregar_horario('segunda')">Carregar</button> </td>
-                    <td> <button onclick="carregar_horario('terça')">Carregar</button> </td>
-                    <td> <button onclick="carregar_horario('quarta')">Carregar</button> </td>
-                    <td> <button onclick="carregar_horario('quinta')">Carregar</button> </td>
-                    <td> <button onclick="carregar_horario('sexta')">Carregar</button> </td>
+                    <td> <button onclick="carregar_horario('segunda', this)">Carregar</button> </td>
+                    <td> <button onclick="carregar_horario('terca', this)">Carregar</button> </td>
+                    <td> <button onclick="carregar_horario('quarta', this)">Carregar</button> </td>
+                    <td> <button onclick="carregar_horario('quinta', this)">Carregar</button> </td>
+                    <td> <button onclick="carregar_horario('sexta', this /* o this serve para identificar qual foi o botão clicado */)">Carregar</button> </td>
                 </tr>
             </tbody>
         </table>
@@ -50,7 +69,10 @@
 
     <script>
 
-        async function carregar_horario(dia){
+        async function carregar_horario(dia, botao) {
+
+            botao.style.display = "none";   // faz o botão sumir
+
             const coluna_dia = document.getElementById(dia)
             try {
                 const link = "http://localhost:3000/aulas/" + dia
@@ -61,7 +83,7 @@
                         coluna_dia.innerHTML = "Nenhuma aula cadastrada!"
                     } else {
                         console.log(aulas_dia)
-                        let = html = "<ul>"
+                        let html = "<ul>"
                         aulas_dia.resposta.forEach((aula1) => {
                             html += "<li>" + aula1.Aula + "</li>"
                         })

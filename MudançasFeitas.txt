@@ -3,3 +3,5 @@
 - adicionei um retangulo por tras das escritas
 - Mudei a cor das escritas da tabela
 - Fiz com que os botões sumão ao ser apertados
+
+/* o this serve para identificar qual foi o botão clicado */
